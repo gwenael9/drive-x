@@ -12,16 +12,15 @@
         <hr>
 
 <!-- if else -->
-    <?php if(empty($driver["pays"]) ) : ?>
+    <p>
+        <?php if($driver["pays"] ) : ?>
+            <?= mb_strtoupper($driver["pays"]) ?> 
+            
+            <?php else : ?>
+                <span>NC</span>
 
-        <p>NC</p>
-
-    <?php else : ?>
-
-        <p>Origine: <?= mb_strtoupper($driver["pays"]) ?> </p>
-
-    <?php endif ?>
-
+        <?php endif ?>
+    </p>
 
 <!-- switch case concernant les disciplines de chaque pilotes -->
 <?php switch ($driver["category"]) : ?>

@@ -1,6 +1,6 @@
 <div class="card text-center shadow my-3">
     <div class="card-header bg-dark text-white ">
-        <!-- ucwords -->
+        <!-- ucwords permet de mettree en majuscule la 1e lettre de chaque mot -->
         <h2 class="card-title"> <?= ucwords($car["name"]) ?> </h2>
     </div>
         
@@ -9,6 +9,7 @@
         <hr>
 
 <!-- if else pour savoir si le pays est renseigné ou non -->
+    <p>
         <?php if($car["pays"] ) : ?>
             <!-- mb_strtoupper permet de mettre en majuscule -->
             <span> <?= mb_strtoupper($car["pays"]) ?> </span>
@@ -17,6 +18,8 @@
                 <span>NC</span>
 
         <?php endif ?>
+    </p>
+
 
 <!-- switch case selon le nombre de CH de la voiture -->    
 <p> Puissance :
