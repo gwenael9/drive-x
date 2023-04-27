@@ -23,20 +23,7 @@
 
 
 <!-- switch case selon le nombre de CH de la voiture -->    
-<p> Puissance :
-
-<?php switch ($car["power"]) : ?>
-<?php case $car["power"] < 1000: ?>
-        <span class="badge badge-danger"><?= $car["power"] ?> CH</span>
-<?php break; ?>
-<?php case $car["power"] >= 1000 && $car["power"] <= 1200 ?>
-        <span class="badge badge-warning"><?= $car["power"] ?> CH</span>
-<?php break; ?>
-<?php default: ?>
-        <span class="badge badge-success"><?= $car["power"] ?> CH</span>
-<?php endswitch ?>
-
-</p>    
+<p> Puissance :<?php carPowerSwitch($car["power"]) ?></p>    
 <!-- fin switch -->     
 
 <!-- if else comme pour la perf -->

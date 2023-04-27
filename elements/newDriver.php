@@ -25,26 +25,7 @@
 <!-- fin if else -->
 
 <!-- switch case concernant les disciplines de chaque pilotes -->
-<p>Discipline :
-
-<?php switch ($driver["category"]) : ?>
-<?php case $driver["category"] == "rallye": ?>
-    <span class="badge badge-danger"> <?= $driver["category"] ?> </span>
-<?php break; ?>
-<?php case $driver["category"] == "drag": ?>
-    <span class="badge badge-warning"> <?= $driver["category"] ?> </span>
-<?php break; ?>
-<?php case $driver["category"] == "nascar": ?>
-    <span class="badge badge-success"> <?= $driver["category"] ?> </span>
-<?php break; ?>
-<?php case $driver["category"] == "formule 1": ?>
-    <span class="badge badge-info"> <?= $driver["category"] ?> </span>
-<?php break; ?>
-<?php case $driver["category"] == "gymkhana": ?>
-    <span class="badge badge-primary"> <?= $driver["category"] ?> </span>
-<?php endswitch ?> 
-
-</p>
+<p>Discipline :<?php driverCategorySwitch($driver["category"]) ?></p>
 <!-- fin switch case -->
 
         <button class="btn btn-success mx-2 border">
@@ -58,3 +39,4 @@
     </div>
 </div>
 <hr>
+

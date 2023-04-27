@@ -1,7 +1,5 @@
 
 
-<div class="card-deck justify-content-center">
-
     <div class="card text-center shadow">
 
     <div class="card-header bg-dark text-white">
@@ -73,4 +71,8 @@
     <hr>
 
 
-</div>
+
+
+<!-- tri de manière croissante une valeur -->
+
+
