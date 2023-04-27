@@ -1,14 +1,7 @@
 
-<!-- if else imbriqués pour savoir si les pilotes sont bien notés selon "likeIts" -->
-    <?php if ($driver["likeIts"] >= 0) :?>
-        <?php if ($driver["likeIts"] == 0) :?>
-            <div class="card text-center shadow my-3 ">
-        <?php else : ?>
-            <div class="card text-center shadow my-3 border border-success">
-        <?php endif ?>
-    <?php else : ?>
-        <div class="card text-center shadow my-3 border border-danger">
-    <?php endif ?>
+<!-- if else ternaire imbriqué qui varie le contour de la div pilote selon likeIts -->
+<div class="card text-center shadow my-3 
+    <?php echo ($driver["likeIts"] > 0) ? 'border border-success' : (($driver["likeIts"] < 0) ? 'border border-danger' : "") ?>">    
 
     <div class="card-header bg-dark text-white ">
         <h2 class="card-title"> <?= ucwords($driver["fullName"]) ?> </h2>
