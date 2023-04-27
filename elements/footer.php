@@ -1,6 +1,3 @@
-<?php require_once "repo.data.php" ?>
-
-
 <footer class="bg-dark p-5 fixed text-white text-center mt-5">
     <p class="font-weight-bold">
         <?= $footer ?>

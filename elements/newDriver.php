@@ -2,44 +2,50 @@
 <!-- if else ternaire imbriqué qui varie le contour de la div pilote selon likeIts -->
 <div class="card text-center shadow my-3 
     <?php echo ($driver["likeIts"] > 0) ? 'border border-success' : (($driver["likeIts"] < 0) ? 'border border-danger' : "") ?>">    
+<!-- fin if else ternaire -->
 
     <div class="card-header bg-dark text-white ">
         <h2 class="card-title"> <?= ucwords($driver["fullName"]) ?> </h2>
     </div>
 
     <div class="card-body">
-        <img src="<?= $driver["coverImage"] ?> " width="300px" height="150px" class="img-fluid" alt="photo kenblock">
+        <img src="<?= $driver["coverImage"] ?> " width="300px" height="150px" class="img-fluid" alt="photo <?= $driver["fullName"] ?>">
         <hr>
 
-<!-- if else -->
-    <p>
-        <?php if($driver["pays"] ) : ?>
-            <?= mb_strtoupper($driver["pays"]) ?> 
+<!-- if else origine -->
+        <p>Origine :
+            <?php if($driver["pays"] ) : ?>
+                <?= mb_strtoupper($driver["pays"]) ?> 
             
-            <?php else : ?>
-                <span>NC</span>
+                <?php else : ?>
+                    <span>NC</span>
 
-        <?php endif ?>
-    </p>
+            <?php endif ?>
+        </p>
+<!-- fin if else -->
 
 <!-- switch case concernant les disciplines de chaque pilotes -->
+<p>Discipline :
+
 <?php switch ($driver["category"]) : ?>
 <?php case $driver["category"] == "rallye": ?>
-    <p>Discipline: <span class="badge badge-danger"> <?= $driver["category"] ?> </span></p>
+    <span class="badge badge-danger"> <?= $driver["category"] ?> </span>
 <?php break; ?>
 <?php case $driver["category"] == "drag": ?>
-    <p>Discipline: <span class="badge badge-warning"> <?= $driver["category"] ?> </span></p>
+    <span class="badge badge-warning"> <?= $driver["category"] ?> </span>
 <?php break; ?>
 <?php case $driver["category"] == "nascar": ?>
-    <p>Discipline: <span class="badge badge-success"> <?= $driver["category"] ?> </span></p>
+    <span class="badge badge-success"> <?= $driver["category"] ?> </span>
 <?php break; ?>
 <?php case $driver["category"] == "formule 1": ?>
-    <p>Discipline: <span class="badge badge-info"> <?= $driver["category"] ?> </span></p>
+    <span class="badge badge-info"> <?= $driver["category"] ?> </span>
 <?php break; ?>
 <?php case $driver["category"] == "gymkhana": ?>
-    <p>Discipline: <span class="badge badge-primary"> <?= $driver["category"] ?> </span></p>
-<?php endswitch ?>
+    <span class="badge badge-primary"> <?= $driver["category"] ?> </span>
+<?php endswitch ?> 
 
+</p>
+<!-- fin switch case -->
 
         <button class="btn btn-success mx-2 border">
             <i class="fas fa-thumbs-up"></i>

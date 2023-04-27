@@ -1,5 +1,3 @@
-<?php require_once "repo.data.php" ?>
-
 <div class="jumbotron my-5 text-center">
     <h1 class="display-3 text-danger">
          <?= $h1 ?>

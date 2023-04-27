@@ -6,15 +6,11 @@
 
         <?php require_once "./elements/entete.php" ?>
 
-        <h2 class="my-5 text-center">
-            <?= $titre1 ?>
-        </h2>
+        <h2 class="my-5 text-center"><?= $titre1 ?></h2>
 
         <?php require_once "./elements/pilote.php" ?>
 
-        <h2 class="my-5 text-center">
-            <?= $titre2 ?>
-        </h2>
+        <h2 class="my-5 text-center"><?= $titre2 ?></h2>
 
         <?php require_once "./elements/voiture.php" ?>
      
