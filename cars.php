@@ -1,6 +1,7 @@
-<?php require_once "./elements/repo.data.php"; ?>
-
-    <?php require_once "./elements/header.php" ?>
+<?php 
+    require_once "./elements/repo.data.php"; 
+    require_once "./elements/header.php" 
+?>
 
     <main class="container">
 

@@ -9,7 +9,7 @@ $titre2 = "Nos meilleurs voitures";
 $drivers = [
     [
       "fullName"=> "ken block",
-      "pays"=> "usa",
+      "pays"=> "",
       "coverImage"=> "./asset/img/drivers/kenblock.jpg",
       "category"=> "gymkhana",
       "likeIts"=> -2
@@ -75,7 +75,7 @@ $drivers = [
 $cars = [
     [
       "name"=> "pagani huayra",
-      "pays"=> "italie",
+      "pays"=> "",
       "coverImage"=>"./asset/img/cars/pagani.jpg",
       "power"=> 765,
       "perf"=> 3.2
